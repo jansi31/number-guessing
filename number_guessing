@@ -1,0 +1,33 @@
+package projects;
+import java.util.Scanner;
+import java.util.Random;
+
+public class Number_guessing {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int input;
+		int rand;
+		int attempt=0;
+		Scanner sc=new Scanner(System.in);
+		Random r = new Random();
+		rand=r.nextInt(100);
+		while(true) {
+		do {
+			System.out.println("Please enter your number within 100:");
+			input=sc.nextInt();
+			}while(input>100);
+		attempt++;
+		if(rand==input) {
+			System.out.println("Congratulations! you guessed the number in "+attempt+" attempts");
+			break;
+		}else if(input<rand) {
+			System.out.println("Your Guess is Low Try again!");
+		}else {
+			System.out.println("Your Guess is high Try again!");
+		}
+		}
+        
+	}
+
+}
